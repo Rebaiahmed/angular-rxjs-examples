@@ -19,4 +19,6 @@ export class AppComponent {
       this.results = results.results;
     });
   }
+
+  //SOURCE : https://github.com/stevedang-dev/Angular-Real-Time-Search-With-RxJS
 }
