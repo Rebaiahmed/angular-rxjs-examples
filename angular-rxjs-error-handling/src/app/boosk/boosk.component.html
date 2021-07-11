@@ -1,0 +1,8 @@
+<div *ngIf="errorMsg">
+  <h1>{{errorMsg}}</h1>
+
+</div>
+
+<ul *ngFor="let post of posts$ |async">
+  <li>{{ post?.title }}</li>
+</ul>
