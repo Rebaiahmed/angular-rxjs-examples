@@ -1,0 +1,17 @@
+{
+  "name": "rxjs-custom-operators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rxjs": "^7.2.0"
+  },
+  "dependencies": {
+    "@types/node": "^16.3.1"
+  }
+}

@@ -49,4 +49,5 @@ export class HttpService {
   getDataWithShareReply(): Observable<any> {
     return this.http.get(URL).pipe(shareReplay(1));
   }
+  //shoudl be followed : https://angular-university.io/lesson/reactive-angular-duplicate-http-requests-sharereplay
 }
