@@ -1,0 +1,39 @@
+<form class="note-form" (ngSubmit)="completeStep()" #noteForm="ngForm">
+  <div class="inputs-holder">
+    <div class="form-group" *ngIf="step === 1; else noteText">
+      <input
+        class="form-control app-input"
+        id="title"
+        name="title"
+        placeholder="The post title"
+        [(ngModel)]="note.title"
+      />
+    </div>
+
+    <ng-template #noteText>
+      <div class="form-group">
+        <textarea
+          class="form-control app-input"
+          id="note-text"
+          rows="4"
+          placeholder="Create a note for future use"
+          [(ngModel)]="note.note"
+          name="text"
+        ></textarea>
+      </div>
+    </ng-template>
+  </div>
+  <button
+    class="prev-button"
+    id="prev"
+    type="button"
+    [hidden]="step === 1"
+    (click)="prevStep()"
+  >
+    Prev
+  </button>
+  <button class="submit-button" id="stepper" type="submit">
+    <span *ngIf="step === 1; else submit">Next</span>
+    <ng-template #submit>Submit</ng-template>
+  </button>
+</form>
